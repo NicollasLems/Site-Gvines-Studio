@@ -1,0 +1,281 @@
+@layer banner-text, gradiente, banner-img;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header img {
+  height: 40px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  background-image: none;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #9b5de5;
+}
+
+@layer banner-text{
+  .text-hero{
+  padding: 60px 20px;
+  text-align: left;
+  min-height: 300px;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  left: 40px;
+  z-index: index 10;
+  }
+}
+
+@layer gradiente{
+  .hero{
+    mask-image: linear-gradient(to left ,#222, #22222200);
+  }
+}
+
+@layer banner-image{
+  .hero{
+  width: 100%;
+  height: 275px;
+  background-image: url(/img/Cenas.png);
+  background-size: contain;
+  position: relative;
+  }
+}
+
+/*.hero {
+  padding: 60px 20px;
+  text-align: left;
+  min-height: 300px;
+  font-size: 20px;   
+  background-image: url(/img/Cenas.png);
+  background-size: contain;
+  mask-image: linear-gradient(to left ,#222, #22222260);
+}*/
+
+.text-hero h2 {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+  top: 50px;
+
+}
+
+.text-hero p {
+  margin-bottom: 20px;
+  position: relative;
+  top: 50px;
+
+}
+
+button {
+  position: relative;
+  left: 40px;
+  bottom: 140px;
+  background-color: #d17fff;
+  border: none;
+  padding: 15px 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.empresa-section {
+  display: flex;
+  padding: 40px 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.empresa-text {
+  max-width: 700px;
+  font-size: 25px;
+  text-align: justify;
+
+}
+
+.empresa-text h3 {
+  font-size: 20px;
+  border-bottom: 2px solid #9b5de5;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.empresa-logo img {
+  width: 450px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  background-color: #9b5de5;
+  padding: 40px;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.equipe-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.equipe-text {
+  margin-left: 30px;
+  text-align: justify;
+  max-width: 700px;
+  font-size: 30px;
+}
+
+.equipe-text h3 {
+  font-size: 20px;
+  border-bottom: 2px solid #9b5de5;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.equipe-img img {
+  position: relative;
+  top: 32px;
+  max-width: 90%;
+  border-radius: 8px;
+  float: right;
+  margin-right: 30px;
+}
+
+.mascote-section {
+  padding: 40px 20px;
+}
+
+.mascote-section h3 {
+  font-size: 20px;
+  border-bottom: 2px solid #9b5de5;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.texto-Athenes {
+  text-align: justify;
+  max-width: 700px;
+  color: white;
+  font-size: 30px;
+}
+
+.mascote-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.mascote-container img {
+  width: 400px;
+}
+
+#contato {
+  background-color: #222;
+  color: #ccc;
+  padding: 30px 20px;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+/* Ícones de contato */
+.footer-contact img {
+  width: 20px;
+  margin-right: 10px;
+ 
+}
+
+/* Links */
+.footer-contact a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Logo */
+.footer-logo img {
+  height: 80px;
+  margin-top: 10px;
+}
+
+/* Direitos autorais */
+.footer-copy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    margin-top: 20px;
+  }
+
+  .footer-copy {
+    text-align: left;
+  }
+}
